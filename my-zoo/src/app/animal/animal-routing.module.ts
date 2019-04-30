@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { PageAccueilAnimalComponent } from './page/page-accueil-animal/page-accueil-animal.component';
+import { DetailAnimalComponent } from './detail-animal/detail-animal.component';
+import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
-    { path: '', component: PageAccueilAnimalComponent }
+    { path: '', component: PageAccueilAnimalComponent },
+    { path: 'detail/:id', component: DetailAnimalComponent },
 ];
 
 @NgModule({
@@ -14,4 +16,5 @@ const appRoutes: Routes = [
         )
     ]
 })
-export class AnimalRootingModule { }
+export class AnimalRoutingModule {
+}

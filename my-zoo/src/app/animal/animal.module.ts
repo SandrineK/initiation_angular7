@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageAccueilAnimalComponent } from './page/page-accueil-animal/page-accueil-animal.component';
-import { AnimalRootingModule } from './animal-rooting.module';
+import { SharedModule } from '../shared/shared.module';
 import { ListeAnimauxComponent } from './liste-animaux/liste-animaux.component';
+import { DetailAnimalComponent } from './detail-animal/detail-animal.component';
+import { AnimalRoutingModule } from './animal-routing.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-    declarations: [PageAccueilAnimalComponent, ListeAnimauxComponent],
+    declarations: [PageAccueilAnimalComponent, ListeAnimauxComponent, DetailAnimalComponent],
+    exports:[ListeAnimauxComponent],
     imports: [
         CommonModule,
-        AnimalRootingModule
+        SharedModule,
+        RouterModule,
+        AnimalRoutingModule
     ]
 })
 export class AnimalModule {

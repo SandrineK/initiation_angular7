@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from '../../shared/models/animal.model';
 import { ANIMAUX } from '../../shared/data/animaux.data';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'zoo-liste-animaux',
