@@ -1,3 +1,10 @@
-<p>
-  page-accueil-convertisseur works!
-</p>
+<h2>Convertisseur</h2>
+<div>
+    <label>Miles:
+        <input #milesInput [value]='miles' (keyup)="onKeyMiles(milesInput.value)"/>
+    </label>
+    <label>Metres:
+        <input #metresInput [value]='metres' (keyup)="onKeyMetres(metresInput.value)"/>
+    </label>
+</div>
+<div>{{miles}} miles = {{metres}} mètres </div>
