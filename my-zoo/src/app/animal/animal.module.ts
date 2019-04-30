@@ -6,6 +6,7 @@ import { ListeAnimauxComponent } from './liste-animaux/liste-animaux.component';
 import { DetailAnimalComponent } from './detail-animal/detail-animal.component';
 import { AnimalRoutingModule } from './animal-routing.module';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [PageAccueilAnimalComponent, ListeAnimauxComponent, DetailAnimalComponent],
@@ -14,7 +15,8 @@ import { RouterModule } from '@angular/router';
         CommonModule,
         SharedModule,
         RouterModule,
-        AnimalRoutingModule
+        AnimalRoutingModule,
+        FormsModule
     ]
 })
 export class AnimalModule {

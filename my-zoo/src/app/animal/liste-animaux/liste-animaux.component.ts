@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from '../../shared/models/animal.model';
 import { ANIMAUX } from '../../shared/data/animaux.data';
-import { Router } from '@angular/router';
+import { AnimalService } from '../services/animal.service';
+
 
 @Component({
   selector: 'zoo-liste-animaux',
@@ -10,11 +11,12 @@ import { Router } from '@angular/router';
 })
 export class ListeAnimauxComponent implements OnInit {
 
-  animaux: Animal[] = ANIMAUX;
+  animaux: Animal[];
 
-  constructor() { }
+  constructor(private animalService : AnimalService) { }
 
   ngOnInit() {
+      this.animaux = this.animalService.getAll();
   }
 
 }

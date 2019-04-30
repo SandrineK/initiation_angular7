@@ -4,4 +4,37 @@ ng generate component animal\detail-animal --module=Animal
 
 ## affichage au clic sur un animal de la liste
 # ajout lien sur la liste des animaux
-<a routerLink="/detail/{{animal.id}}">
+<a routerLink="/animal/detail/{{animal.id}}">
+
+#Etape 1 : récupérer l'id 
+detail compotent ts : ajouter dans constructeur ==> private route: ActivatedRoute
+
+# récupérer l'id de la route et l'afficher dans la console
+const id = +this.route.snapshot.paramMap.get('id');
+
+# Effectuer l'injection de dépendance du service animal
+private animalService : AnimalService
+
+#stocker en local l'animal
+this.animal = this.animalService.get(id);
+
+#html de détail :
+Afficher le nom ==> <h2>Fiche de {{animal.nom | uppercase}}</h2>
+
+#Ajouter le FormsModule dans le animal module
+
+#Créer un joli formulaire
+
+<div><span>id: </span>{{animal.id}}</div>
+<div><label>
+    Nom :
+    <input [(ngModel)]='animal.nom'
+           placeholder='name'/>
+</label></div>
+<div><label>
+    Espèce :
+    <input [(ngModel)]='animal.espece'/>
+</label>
+</div>
+
+

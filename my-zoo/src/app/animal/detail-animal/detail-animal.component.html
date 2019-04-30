@@ -1,3 +1,10 @@
-<p>
-  detail-animal works!
-</p>
+<h2>{{animal.nom | uppercase}} Details</h2>
+<div><span>id: </span>{{animal.id}}</div>
+<div><label>
+    Nom :
+    <input [(ngModel)]='animal.nom'
+           placeholder='name'/>
+</label></div>
+<div>
+    Espèce : {{animal.espece}}
+</div>
