@@ -1,0 +1,7 @@
+#Création d'un component de détail des animaux
+
+ng generate component animal\detail-animal --module=Animal
+
+## affichage au clic sur un animal de la liste
+# ajout lien sur la liste des animaux
+<a routerLink="/detail/{{animal.id}}">
